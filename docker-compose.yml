@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  estudos-sql-server-db:
+    container_name: estudos-sql-server-db
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA}
+      SA_PASSWORD: ${SA_PASSWORD}
+      MSSQL_PID: ${MSSQL_PID}
+    ports:
+      - "1433:1433"    
+    volumes:
+      - sqlserver_data:/var/lib/mssqlql/data
+
+volumes:
+  sqlserver_data:
