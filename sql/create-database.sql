@@ -1,0 +1,9 @@
+CREATE DATABASE ESTUDOS_SQLSERVER
+ON ( 
+    NAME = N'ESTUDOS_SQLSERVER', 
+    FILENAME = N'/var/lib/mssqlql/data/ESTUDOS_SQLSERVER.mdf' 
+)
+LOG ON ( 
+    NAME = N'ESTUDOS_SQLSERVER_LOG', 
+    FILENAME = N'/var/lib/mssqlql/data/ESTUDOS_SQLSERVER_LOG.ldf' 
+)
